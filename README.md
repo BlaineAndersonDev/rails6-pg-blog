@@ -164,14 +164,32 @@
     * I created an [example schema]() for this project using dbdiagram.
     * ![Whiteboard Wireframe Example](/app/assets/images/readme/dbdiagram_example.png?raw=true "Whiteboard Wireframe Example")
   * If you don't know what those things are, don't worry, we'll cover it all soon.
-  * Now that I know the basics I'll need for the MVP, we can generate some models.
+  * Now that we know the basics we'll need for the MVP, we can generate some models.
 
 ### __Generating the Model(s)__
-  * 
-  * 
-  * 
-  * 
-  * 
+  * Lets generate the model using the rails generator:
+    * `rails g model users name:string avatar:string`
+      * _Note that the avatar is a string. This is because we will be storing the file itself locally and will only need a relative path._
+  * Now we will repeat the process for our Articles model:
+    * `rails g model articles user_id:references title:string text:string image:string post_date:datetime`
+      * *Note that the user_id is a reference, this will setup Article to have `user_id:integer` & automatically make it `belongs_to` a user_id. However, we will still have to update user.rb with `has_many`.*
+      * *Note that the image is a string just like the users avatar.*
+  * This will generate multiple files for each model, though we only need two for each:
+    * The Migrations at /db/migrate/. They should look similar to this with different numbers:
+      * `20200417215133_create_users.rb`
+      * `20200417220134_create_articles.rb`
+    * The Models at /app/models
+      * `user.rb`
+      * `article.rb`
+    * _Note that the migrations are plurel and the Models are singular. Thats normal naming convention for this_
+  * Open /app/models/user.rb and overwrite the file:
+    ```
+    class User < ApplicationRecord
+      has_many :articles
+    end
+    ```
+  * Now that our Models are in place, we can migrate our database:
+    * `rake db:migrate`
   * 
 
 ### __________________
