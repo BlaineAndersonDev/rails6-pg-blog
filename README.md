@@ -141,17 +141,25 @@
 ### __Schema Critical Thinking__
   * Before we can generate models, we have to know what those models need.
   * First I need to make out a basic wireframe so I can visualize the App and discern what I need. I use whiteboards, but you can also use something like [Paint](https://jspaint.app/).
-  * I have made one using Paint for example:
+  * I have made one using both options for example:
   * ![Paint Wireframe Example](/app/assets/images/readme/paint_example.png?raw=true "Paint Wireframe Example")
+  * ![Whiteboard Wireframe Example](/app/assets/images/readme/whiteboard_example.png?raw=true "Whiteboard Wireframe Example")
   * Using this example, I know that for the MVP (Minimum Viable Product) I will need:
     * A User Model with the fields:
+      * id (Automatically Generated)
       * name
       * avatar
+      * created_at (Automatically Generated)
+      * updated_at (Automatically Generated)
     * An Article Model with the fields:
+      * id (Automatically Generated)
       * user_id foreign key
       * title
       * text
+      * image
       * post_date
+      * created_at (Automatically Generated)
+      * updated_at (Automatically Generated)
   * If you don't know what those things are, don't worry, we'll cover it all soon.
   * Now that I know the basics I'll need for the MVP, we can generate some models.
 
