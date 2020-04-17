@@ -122,6 +122,8 @@
 
   # Ignore Envionmental Variables.
   .env
+  /db/rails6_pg_blog_development.sqlite3
+  /db/rails6_pg_blog_test.sqlite3
   ```
 
 ### __Setup Github & Git Commit__
