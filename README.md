@@ -162,7 +162,7 @@
       * updated_at (Automatically Generated)
   * If you wanted to see this laid out in a more proper schema setting (usually for more complex schemas) you can use [dbdiagram](https://dbdiagram.io/d).
     * I created an [example schema]() for this project using dbdiagram.
-    * ![Whiteboard Wireframe Example](/app/assets/images/readme/dbdiagram_example.png?raw=true "Whiteboard Wireframe Example")
+    * ![Whiteboard Wireframe Example](/app/assets/images/readme/dbdiagram_example.png?raw=true=20x20 "Whiteboard Wireframe Example")
   * If you don't know what those things are, don't worry, we'll cover it all soon.
   * Now that I know the basics I'll need for the MVP, we can generate some models.
 
